@@ -16,6 +16,8 @@ An example of a length 21 DNA string (whose alphabet contains the symbols 'A', '
 
     20 12 17 21
     
+Details here: [Counting DNA Nucleotides](http://rosalind.info/problems/dna/)
+    
 ## Testing and Running the Code
 
 Run the test suite:

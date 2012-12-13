@@ -1,4 +1,4 @@
-## Transcribing DNA into RNA
+## Transcribing DNA into RNA: UNSOLVED - WORK IN PROGRESS
 
 An RNA string is a string formed from the alphabet containing 'A', 'C', 'G', and 'U'.
 

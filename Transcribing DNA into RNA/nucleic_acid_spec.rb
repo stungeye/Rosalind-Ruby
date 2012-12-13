@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative 'dna'
+require_relative 'nucleic_acid'
 
 describe DNA do
   before do

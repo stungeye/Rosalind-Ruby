@@ -1,6 +1,6 @@
 ## Rosalind Bioinformatics Challenges
 
-Solving the Rosalind bioinformatics challenges using Ruby with Minitest specs.
+Solving the [Rosalind bioinformatics challenges](http://rosalind.info) using Ruby with Minitest specs.
 
 ### Solved Challenges
 

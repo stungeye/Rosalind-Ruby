@@ -24,6 +24,22 @@ class NucleicAcid
     @base_counts['T']
   end
   
+  def count_U
+    @base_counts['U']
+  end
+  
+  def to_base_swapped_string from_base, to_base
+    @string.gsub(from_base, to_base)
+  end
+  
+  def ==(other)
+    @string == other.to_s
+  end
+  
+  def to_s
+    @string
+  end
+  
   protected
   
   def count_bases

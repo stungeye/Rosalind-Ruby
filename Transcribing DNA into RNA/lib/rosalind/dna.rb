@@ -6,4 +6,8 @@ class DNA < NucleicAcid
     "#{count_A} #{count_C} #{count_G} #{count_T}"
   end
   
+  def to_rna
+    RNA.new( to_base_swapped_string('T','U') )
+  end
+  
 end

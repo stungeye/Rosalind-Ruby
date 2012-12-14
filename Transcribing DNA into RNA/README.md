@@ -1,4 +1,4 @@
-## Transcribing DNA into RNA: UNSOLVED - WORK IN PROGRESS
+## Transcribing DNA into RNA: SOLVED
 
 An RNA string is a string formed from the alphabet containing 'A', 'C', 'G', and 'U'.
 
@@ -22,11 +22,11 @@ Details here: [Transcribing DNA into RNA](http://rosalind.info/problems/rna/)
 
 Run the test suite:
 
-    tba
+    rake test
     
 Process a file containing RNA strings:
 
-    tba
+    ruby main.rb < rosalind_rna.txt
     
 ## Unlicense
 

@@ -7,6 +7,7 @@ class RNA < NucleicAcid
   end
   
   def to_dna
+    DNA.new( to_base_swapped_string('U','T') )
   end
   
 end

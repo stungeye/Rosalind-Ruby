@@ -22,13 +22,16 @@ describe RNA do
   end
   
   describe "when transcribing to DNA" do
-    it "must convert to a DNA object" do
+    it "must be able to convert to a DNA object" do
       @dna_from_rna = @sample_rna.to_dna
       @dna_from_rna.class.must_equal DNA
     end
-    it "must convert to the correct sample DNA object" do
+    it "must convert to DNA correctly" do
       @dna_from_rna = @sample_rna.to_dna
       @dna_from_rna.must_equal @sample_dna
+    end
+    it "must be able to convert back to original RNA" do
+      @sample_rna.to_dna.to_rna.must_equal @sample_rna
     end
   end
 end

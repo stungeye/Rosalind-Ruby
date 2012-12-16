@@ -15,7 +15,6 @@ describe DNA do
     end
   end
   
-  
   describe "when initialized with Rosalind 'dna' sample dataset" do
     it "must generate the correct ASCII count output" do
       @sample_dna.ASCII_base_count.must_equal "20 12 17 21"
@@ -23,13 +22,16 @@ describe DNA do
   end
   
   describe "when transcribing to RNA" do
-    it "must convert to the a RNA object" do
+    it "must be able to convert to a RNA object" do
       @rna_from_dna = @sample_dna.to_rna
       @rna_from_dna.class.must_equal RNA
     end
-    it "must convert to the correct sample RNA object" do
+    it "must convert to RNA correctly" do
       @rna_from_dna = @sample_dna.to_rna
       @rna_from_dna.must_equal @sample_rna
+    end
+    it "must be able to convert back to original DNA" do
+      @sample_dna.to_rna.to_dna.must_equal @sample_dna
     end
   end
 end

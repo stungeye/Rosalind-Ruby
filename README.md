@@ -34,7 +34,7 @@ A NucleicAcid class is refactored from the DNA class. DNA and RNA classes inheri
 
 ###Specs
 
-Includes 17 tests and 34 assertions.
+Includes 19 tests and 36 assertions.
 
 A Rakefile was added to handle multiple spec files.
 

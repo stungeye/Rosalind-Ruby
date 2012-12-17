@@ -17,7 +17,7 @@ A single DNA class is developed.
 
 ####Internals
 
-* The DNA object the ordered list of nucleotides is implemented with a String.
+* The ordered list of nucleotides is implemented with a String.
 * Base counting is performed when a DNA object is instantiated by way of a Hash.
 
 ####Specs

@@ -1,4 +1,4 @@
-## Complementing a Strand of DNA: Work in Progress
+## Complementing a Strand of DNA: SOLVED
 
 In DNA strings, symbols 'A' and 'T' are complements of each other, as are 'C' and 'G'.
 

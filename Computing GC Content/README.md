@@ -1,22 +1,33 @@
-## Complementing a Strand of DNA: SOLVED
+## Computing GC Content : Work in Progress
 
-In DNA strings, symbols 'A' and 'T' are complements of each other, as are 'C' and 'G'.
+The GC-content of a DNA string is given by the percentage of symbols in the string that are 'C' or 'G'. For example, the GC-content of "AGCTATAG" is 37.5%. Note that the reverse complement of any DNA string has the same GC-content.
 
-The reverse complement of a DNA string s is the string sc formed by reversing the symbols of s, then taking the complement of each symbol (e.g., the reverse complement of "GTCA" is "TGAC").
+DNA strings must be labeled when they are consolidated into a database. A commonly used method of string labeling is called FASTA format. In this format, the string is introduced by a line that begins with '>', followed by some labeling information. Subsequent lines contain the string itself; the first line to begin with '>' indicates the label of the next string.
 
-**Given:** A DNA string s of length at most 1000 bp.
+In Rosalind's implementation, a string in FASTA format will be labeled by the ID "Rosalind_xxxx", where "xxxx" denotes a four-digit code between 0000 and 9999.
 
-**Return:** The reverse complement sc of s.
+**Given:** At most 10 DNA strings in FASTA format (of length at most 1 kbp each).
+
+**Return:** The ID of the string having the highest GC-content, followed by the GC-content of that string. Rosalind allows for a default error of 0.001 in all decimal answers unless otherwise stated; please see the note on absolute error below.
 
 #### Sample Dataset
 
-    AAAACCCGGT
+    >Rosalind_6404
+    CCTGCGGAAGATCGGCACTAGAATAGCCAGAACCGTTTCTCTGAGGCTTCCGGCCTTCCC
+    TCCCACTAATAATTCTGAGG
+    >Rosalind_5959
+    CCATCGGTAGCGCATCCTTAGTCCAATTAAGTCCCTATCCAGGCGCTCCGCCGAAGGTCT
+    ATATCCATTTGTCAGCAGACACGC
+    >Rosalind_0808
+    CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGAC
+    TGGGAACCTGCGGGCAGTAGGTGGAAT
 
 #### Sample Output
 
-    ACCGGGTTTT
+    Rosalind_0808
+    60.919540%
     
-Details here: [Complementing a Strand of DNA](http://rosalind.info/problems/revc/)
+Details here: [Computing GC Content](http://rosalind.info/problems/gc/)
     
 ## Testing and Running the Code
 
@@ -26,7 +37,7 @@ Run the test suite:
     
 Process a file containing DNA strings:
 
-    ruby main.rb < rosalind_dna.txt
+    tba
     
 ## Unlicense
 

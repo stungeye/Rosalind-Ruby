@@ -1,18 +1,18 @@
 require 'minitest/autorun'
 require_relative '../lib/rosalind'
 
-describe DNA do
+describe Rosalind::DNA do
   before do
-    @empty_dna = DNA.new
-    @short_dna = DNA.new('ACGT') # Is it's own reverse complement.
-    @sample_rna = RNA.new('AGCUUUUCAUUCUGACUGCAACGGGCAAUAUGUCUCUGUGUGGAUUAAAAAAAGAGUGUCUGAUAGCAGC')
-    @sample_dna = DNA.new('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC')
-    @sample_reverse_complement = DNA.new('GCTGCTATCAGACACTCTTTTTTTAATCCACACAGAGACATATTGCCCGTTGCAGTCAGAATGAAAAGCT')
+    @empty_dna = Rosalind::DNA.new
+    @short_dna = Rosalind::DNA.new('ACGT') # Is it's own reverse complement.
+    @sample_rna = Rosalind::RNA.new('AGCUUUUCAUUCUGACUGCAACGGGCAAUAUGUCUCUGUGUGGAUUAAAAAAAGAGUGUCUGAUAGCAGC')
+    @sample_dna = Rosalind::DNA.new('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC')
+    @sample_reverse_complement = Rosalind::DNA.new('GCTGCTATCAGACACTCTTTTTTTAATCCACACAGAGACATATTGCCCGTTGCAGTCAGAATGAAAAGCT')
   end
   
   describe "when asked for its class" do
     it "must response with DNA" do
-      @empty_dna.class.must_equal DNA
+      @empty_dna.class.must_equal Rosalind::DNA
     end
   end
   
@@ -29,7 +29,7 @@ describe DNA do
   describe "when transcribing to RNA" do
     it "must be able to convert to a RNA object" do
       rna_from_dna = @sample_dna.to_rna
-      rna_from_dna.class.must_equal RNA
+      rna_from_dna.class.must_equal Rosalind::RNA
     end
     it "must convert to RNA correctly" do
       rna_from_dna = @sample_dna.to_rna

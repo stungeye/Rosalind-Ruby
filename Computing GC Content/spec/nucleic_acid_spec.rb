@@ -1,20 +1,20 @@
 require 'minitest/autorun'
 require_relative '../lib/rosalind'
 
-describe NucleicAcid do
+describe Rosalind::NucleicAcid do
   before do
-    @empty_string = NucleicAcid.new
-    @short_string = NucleicAcid.new('ACGTU') # One of each base for testing purposes.
-    @sample_dna_string = NucleicAcid.new('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC')
-    @sample_rna_string = NucleicAcid.new('AGCUUUUCAUUCUGACUGCAACGGGCAAUAUGUCUCUGUGUGGAUUAAAAAAAGAGUGUCUGAUAGCAGC')
+    @empty_string = Rosalind::NucleicAcid.new
+    @short_string = Rosalind::NucleicAcid.new('ACGTU') # One of each base for testing purposes.
+    @sample_dna_string = Rosalind::NucleicAcid.new('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC')
+    @sample_rna_string = Rosalind::NucleicAcid.new('AGCUUUUCAUUCUGACUGCAACGGGCAAUAUGUCUCUGUGUGGAUUAAAAAAAGAGUGUCUGAUAGCAGC')
   end
   
   describe "when asked for its class" do
     it "must response with NucleicAcid" do
-      @empty_string.class.must_equal NucleicAcid
-      @short_string.class.must_equal NucleicAcid
-      @sample_dna_string.class.must_equal NucleicAcid
-      @sample_rna_string.class.must_equal NucleicAcid
+      @empty_string.class.must_equal Rosalind::NucleicAcid
+      @short_string.class.must_equal Rosalind::NucleicAcid
+      @sample_dna_string.class.must_equal Rosalind::NucleicAcid
+      @sample_rna_string.class.must_equal Rosalind::NucleicAcid
     end
   end
   

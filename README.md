@@ -8,6 +8,7 @@ This is deliberate practice with test-driven problem solving.
 
 1. Counting DNA Nucleotides - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Counting%20DNA%20Nucleotides) - [Details](http://rosalind.info/problems/dna/)
 2. Transcribing DNA into RNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Transcribing%20DNA%20into%20RNA) - [Details](http://rosalind.info/problems/rna/)
+3. Complementing a Strand of DNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Complementing%20a%20Strand%20of%20DNA) - [Details](http://rosalind.info/problems/revc/)
 
 ## Development Journal
 
@@ -39,4 +40,16 @@ A NucleicAcid class is refactored from the DNA class. DNA and RNA classes inheri
 Includes 19 tests and 36 assertions.
 
 A Rakefile was added to handle multiple spec files.
+
+###Complementing a Strand of DNA
+
+DNA now includes a `to_reverse_complement` method that returns another DNA object.
+
+####Internals
+
+Reversal is done using String manipulation. The complementing is done using an Array mapping of the String.
+
+####Specs
+
+Includes 21 tests and 38 assertions.
 

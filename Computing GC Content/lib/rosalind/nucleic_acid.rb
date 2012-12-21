@@ -41,6 +41,14 @@ module Rosalind
       @string
     end
     
+    def percentage_GC_content
+      100.0 * (count_C + count_G) / length
+    end
+    
+    def percentage_GC_content_string
+      "#{percentage_GC_content}%"
+    end
+    
     protected
     
     def count_bases

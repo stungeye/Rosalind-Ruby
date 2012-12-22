@@ -37,7 +37,7 @@ Run the test suite:
     
 Process a file containing DNA strings:
 
-    tba
+    ruby main.rb < rosalind_gc.txt
     
 ## Unlicense
 

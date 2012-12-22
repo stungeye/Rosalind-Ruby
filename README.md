@@ -9,6 +9,7 @@ This is deliberate practice with test-driven problem solving.
 1. Counting DNA Nucleotides - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Counting%20DNA%20Nucleotides) - [Details](http://rosalind.info/problems/dna/)
 2. Transcribing DNA into RNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Transcribing%20DNA%20into%20RNA) - [Details](http://rosalind.info/problems/rna/)
 3. Complementing a Strand of DNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Complementing%20a%20Strand%20of%20DNA) - [Details](http://rosalind.info/problems/revc/)
+4. Computing GC Content - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Computing%20GC%20Content) - [Details](http://rosalind.info/problems/gc/)
 
 ## Development Journal
 
@@ -53,3 +54,14 @@ Reversal is done using String manipulation. The complementing is done using an A
 
 Includes 21 tests and 38 assertions.
 
+###Computing GC Content
+
+Refactored code such that all classes are part of a Rosalind module. Added a Fasta class to read FASTA strings. Added GC content percentage calculation to NucleicAcid.
+
+####Internals
+
+Parsed FASTA strings are stored as a hash. This makes retrieving by identifier easy, but sorting is a little awkward. 
+
+####Specs
+
+Includes 28 tests and 48 assertions.

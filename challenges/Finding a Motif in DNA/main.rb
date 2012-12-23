@@ -1,4 +1,4 @@
-require_relative '../lib/rosalind'
+require_relative '../../lib/rosalind'
 
 dnas = []
 

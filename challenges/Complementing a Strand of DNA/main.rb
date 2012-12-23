@@ -1,4 +1,4 @@
-require_relative '../lib/rosalind'
+require_relative '../../lib/rosalind'
 
 ARGF.each_line do |line|
   dna = Rosalind::DNA.new(line)

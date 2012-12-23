@@ -8,10 +8,11 @@ All library code is in the [lib](https://github.com/stungeye/Rosalind-Ruby/tree/
 
 ## Solved Challenges
 
-1. Counting DNA Nucleotides - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Counting%20DNA%20Nucleotides) - [Details](http://rosalind.info/problems/dna/)
-2. Transcribing DNA into RNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Transcribing%20DNA%20into%20RNA) - [Details](http://rosalind.info/problems/rna/)
-3. Complementing a Strand of DNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Complementing%20a%20Strand%20of%20DNA) - [Details](http://rosalind.info/problems/revc/)
-4. Computing GC Content - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/Computing%20GC%20Content) - [Details](http://rosalind.info/problems/gc/)
+1. Counting DNA Nucleotides - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Counting%20DNA%20Nucleotides) - [Details](http://rosalind.info/problems/dna/)
+2. Transcribing DNA into RNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Transcribing%20DNA%20into%20RNA) - [Details](http://rosalind.info/problems/rna/)
+3. Complementing a Strand of DNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Complementing%20a%20Strand%20of%20DNA) - [Details](http://rosalind.info/problems/revc/)
+4. Computing GC Content - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Computing%20GC%20Content) - [Details](http://rosalind.info/problems/gc/)
+5. Counting Point Mutations - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Counting%20Point%20Mutations) - [Details](http://rosalind.info/problems/hamm/)
 
 ## Development Journal
 
@@ -67,6 +68,18 @@ Parsed FASTA strings are stored as a hash. This makes retrieving by identifier e
 ####Specs
 
 Includes 28 tests and 48 assertions.
+
+###Counting Point Mutations
+
+Added hamming distance method to NucelicAcid. Refactored all challenges such that the library and specs are now in the root folder, rather than duplicated within each challenge.
+
+####Internals
+
+To calculate the hamming distance I have one NucelicAcid object compare its array representation of its bases with those of another NucelicAcid. It feels wrong to peak this deep inside another object, but I made myself feel better by comparing arrays fetched using a custom to_a method. So, at least I'm not directly inspecting the internal bases. :)
+
+####Specs
+
+Includes 32 tests and 52 assertions.
 
 ## Unlicense
 

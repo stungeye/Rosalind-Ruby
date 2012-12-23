@@ -13,6 +13,7 @@ All library code is in the [lib](https://github.com/stungeye/Rosalind-Ruby/tree/
 3. Complementing a Strand of DNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Complementing%20a%20Strand%20of%20DNA) - [Details](http://rosalind.info/problems/revc/)
 4. Computing GC Content - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Computing%20GC%20Content) - [Details](http://rosalind.info/problems/gc/)
 5. Counting Point Mutations - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Counting%20Point%20Mutations) - [Details](http://rosalind.info/problems/hamm/)
+6. Finding a Motif in DNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Finding%20a%20Motif%20in%20DNA) - [Details](http://rosalind.info/problems/subs/)
 
 ## Development Journal
 
@@ -80,6 +81,18 @@ To calculate the hamming distance I have one NucelicAcid object compare its base
 ####Specs
 
 Includes 32 tests and 52 assertions.
+
+###Finding a Motif in DNA
+
+Added a find_substring_indexes method to NucelicAcid.
+
+####Internals
+
+Used Ruby's sub-string finding method index to find all the indexes of all occurances of a sub-string of DNA within another DNA string.
+
+####Specs
+
+Includes 34 tests and 56 assertions.
 
 ## Unlicense
 

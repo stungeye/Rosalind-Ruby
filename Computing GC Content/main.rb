@@ -1,4 +1,4 @@
-require_relative 'lib/rosalind'
+require_relative '../lib/rosalind'
 
 fasta_data = Rosalind::Fasta.new(ARGF.read)
 sorted_tuples = fasta_data.sort_by_GC_content

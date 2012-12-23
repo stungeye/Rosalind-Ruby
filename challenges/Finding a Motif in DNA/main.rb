@@ -8,4 +8,6 @@ end
 
 dna_1, dna_2 = dnas
 
-puts dna_1.hamming_distance(dna_2)
+indexes = dna_1.find_substring_indexes(dna_2)
+
+puts indexes.join(' ')

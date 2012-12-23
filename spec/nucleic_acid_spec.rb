@@ -9,6 +9,7 @@ describe Rosalind::NucleicAcid do
     @sample_rna_string = Rosalind::NucleicAcid.new('AGCUUUUCAUUCUGACUGCAACGGGCAAUAUGUCUCUGUGUGGAUUAAAAAAAGAGUGUCUGAUAGCAGC')
     @medium_string_1   = Rosalind::NucleicAcid.new('GAGCCTACTAACGGGAT')
     @medium_string_2   = Rosalind::NucleicAcid.new('CATCGTAATGACGGCCT')
+    @medium_string_3   = Rosalind::NucleicAcid.new('GATATATGCATATACTT')
   end
   
   describe "when asked for its class" do
@@ -67,7 +68,7 @@ describe Rosalind::NucleicAcid do
     end
   end
   
-  describe "when initialized with 'dna' sample dataset" do
+  describe "when initialized with 'dna' sample datasets" do
     it "must respond with a length of seventy" do
       @sample_dna_string.length.must_equal 70
     end
@@ -79,6 +80,16 @@ describe Rosalind::NucleicAcid do
     end
     it "must respond with a GC content of nearly 41.428571%"  do
       @sample_dna_string.percentage_GC_content.must_be_within_delta 41.42857142857143, 0.001
+    end
+    it "must show that a specific substring doesn't exist within its bases" do
+      indexes = @medium_string_3.find_substring_indexes(@short_string)
+      indexes.count.must_equal 0
+      indexes.must_equal []
+    end
+    it "must find all indexes of a specific substring within its bases" do
+      indexes = @medium_string_3.find_substring_indexes(Rosalind::DNA.new('ATAT'))
+      indexes.count.must_equal 3
+      indexes.must_equal [2, 4, 10]
     end
   end
 

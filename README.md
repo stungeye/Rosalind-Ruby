@@ -75,7 +75,7 @@ Added hamming distance method to NucelicAcid. Refactored all challenges such tha
 
 ####Internals
 
-To calculate the hamming distance I have one NucelicAcid object compare its array representation of its bases with those of another NucelicAcid. It feels wrong to peak this deep inside another object, but I made myself feel better by comparing arrays fetched using a custom to_a method. So, at least I'm not directly inspecting the internal bases. :)
+To calculate the hamming distance I have one NucelicAcid object compare its its bases with those of another NucelicAcid. It feels wrong to peak this deep inside another object, but I made myself feel better by comparing arrays fetched using a custom to_a method. So, at least I'm not directly inspecting the internal bases. Is there a more OO way to do this type of low level comparison?
 
 ####Specs
 

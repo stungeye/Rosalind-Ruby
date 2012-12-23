@@ -2,7 +2,9 @@
 
 Solving the [Rosalind bioinformatics challenges](http://rosalind.info) using Ruby with Minitest specs.
 
-This is deliberate practice with test-driven problem solving. 
+This is deliberate practice with test-driven problem solving.
+
+All library code is in the [lib](https://github.com/stungeye/Rosalind-Ruby/tree/master/lib) folder. All specs are in the [spec](https://github.com/stungeye/Rosalind-Ruby/tree/master/spec) folder.
 
 ## Solved Challenges
 
@@ -65,3 +67,7 @@ Parsed FASTA strings are stored as a hash. This makes retrieving by identifier e
 ####Specs
 
 Includes 28 tests and 48 assertions.
+
+## Unlicense
+
+This is free and unencumbered software released into the public domain.  See UNLICENSE for details.

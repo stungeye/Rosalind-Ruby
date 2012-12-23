@@ -88,7 +88,7 @@ Added a find_substring_indexes method to NucelicAcid.
 
 ####Internals
 
-Used Ruby's sub-string finding method index to find all the indexes of all occurances of a sub-string of DNA within another DNA string.
+Used Ruby's sub-string finding method [index](http://www.ruby-doc.org/core-1.9.3/String.html#method-i-index) to find all the indexes of all occurances of a sub-string of DNA within another DNA string.
 
 ####Specs
 

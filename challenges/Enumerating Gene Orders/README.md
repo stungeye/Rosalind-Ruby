@@ -1,4 +1,4 @@
-## Enumerating Gene Orders
+## Enumerating Gene Orders: SOLVED
 
 A permutation of length n is some ordering of the positive integers {1,2,...,n}. For example, (5,3,2,1,4) is a permutation of length 5.
 

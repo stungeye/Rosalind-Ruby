@@ -1,4 +1,4 @@
-## Rosalind Bioinformatics Challenges
+# Rosalind Bioinformatics Challenges
 
 Solving the [Rosalind bioinformatics challenges](http://rosalind.info) using Ruby with Minitest specs.
 
@@ -6,7 +6,7 @@ This is deliberate practice with test-driven problem solving.
 
 All library code is in the [lib](https://github.com/stungeye/Rosalind-Ruby/tree/master/lib) folder. All specs are in the [spec](https://github.com/stungeye/Rosalind-Ruby/tree/master/spec) folder.
 
-## Solved Challenges
+# Solved Challenges
 
 1. Counting DNA Nucleotides - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Counting%20DNA%20Nucleotides) - [Details](http://rosalind.info/problems/dna/)
 2. Transcribing DNA into RNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Transcribing%20DNA%20into%20RNA) - [Details](http://rosalind.info/problems/rna/)
@@ -107,6 +107,6 @@ Ruby's Array class contains [a method](http://www.ruby-doc.org/core-1.9.3/Array.
 
 Stand-alone program developed without tests using a built in Ruby method.
 
-## Unlicense
+# Unlicense
 
 This is free and unencumbered software released into the public domain.  See UNLICENSE for details.

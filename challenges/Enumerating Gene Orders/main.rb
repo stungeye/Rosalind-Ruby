@@ -1,4 +1,9 @@
-# 
+# From the command line: ruby main.rb n
+#
+# Where n is a positive integer <= 7.
+#
+# Returns the total number of permutations of length n,
+# followed by a list of all such permutations.
 
 unless ARGV.length.zero?
   

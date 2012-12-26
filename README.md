@@ -14,10 +14,11 @@ All library code is in the [lib](https://github.com/stungeye/Rosalind-Ruby/tree/
 4. Computing GC Content - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Computing%20GC%20Content) - [Details](http://rosalind.info/problems/gc/)
 5. Counting Point Mutations - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Counting%20Point%20Mutations) - [Details](http://rosalind.info/problems/hamm/)
 6. Finding a Motif in DNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Finding%20a%20Motif%20in%20DNA) - [Details](http://rosalind.info/problems/subs/)
+7. Enumerating Gene Orders - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Enumerating%20Gene%20Orders) - [Details](http://rosalind.info/problems/perm/)
 
-## Development Journal
+# Development Journal
 
-###Counting DNA Nucleotides
+##Counting DNA Nucleotides
 
 A single DNA class is developed.
 
@@ -30,7 +31,7 @@ A single DNA class is developed.
 
 Includes 8 tests and 17 assertions.
 
-###Transcribing DNA into RNA
+##Transcribing DNA into RNA
 
 A NucleicAcid class is refactored from the DNA class. DNA and RNA classes inherit from NucelicAcid.
 
@@ -46,7 +47,7 @@ Includes 19 tests and 36 assertions.
 
 A Rakefile was added to handle multiple spec files.
 
-###Complementing a Strand of DNA
+##Complementing a Strand of DNA
 
 DNA now includes a `to_reverse_complement` method that returns another DNA object.
 
@@ -58,7 +59,7 @@ Reversal is done using String manipulation. The complementing is done using an A
 
 Includes 21 tests and 38 assertions.
 
-###Computing GC Content
+##Computing GC Content
 
 Refactored code such that all classes are part of a Rosalind module. Added a Fasta class to read FASTA strings. Added GC content percentage calculation to NucleicAcid.
 
@@ -70,7 +71,7 @@ Parsed FASTA strings are stored as a hash. This makes retrieving by identifier e
 
 Includes 28 tests and 48 assertions.
 
-###Counting Point Mutations
+##Counting Point Mutations
 
 Added hamming distance method to NucelicAcid. Refactored all challenges such that the library and specs are now in the root folder, rather than duplicated within each challenge.
 
@@ -82,7 +83,7 @@ To calculate the hamming distance I have one NucelicAcid object compare its base
 
 Includes 32 tests and 52 assertions.
 
-###Finding a Motif in DNA
+##Finding a Motif in DNA
 
 Added a find_substring_indexes method to NucelicAcid.
 
@@ -93,6 +94,18 @@ Used Ruby's sub-string finding method [index](http://www.ruby-doc.org/core-1.9.3
 ####Specs
 
 Includes 34 tests and 56 assertions.
+
+##Enumerating Gene Orders
+
+Stand-alone program developed find all permutations of integer sets of length n.
+
+####Internals
+ 
+Ruby's Array class contains [a method](http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-permutation) that returns an enumerator of array permuations. Nice.
+
+####Specs
+
+Stand-alone program developed without tests using a built in Ruby method.
 
 ## Unlicense
 

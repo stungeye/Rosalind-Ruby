@@ -15,6 +15,7 @@ All library code is in the [lib](https://github.com/stungeye/Rosalind-Ruby/tree/
 5. Counting Point Mutations - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Counting%20Point%20Mutations) - [Details](http://rosalind.info/problems/hamm/)
 6. Finding a Motif in DNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Finding%20a%20Motif%20in%20DNA) - [Details](http://rosalind.info/problems/subs/)
 7. Enumerating Gene Orders - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Enumerating%20Gene%20Orders) - [Details](http://rosalind.info/problems/perm/)
+8. Protein Translation - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Protein%20Translation) - [Details](http://rosalind.info/problems/prot/)
 
 # Development Journal
 
@@ -106,6 +107,20 @@ Ruby's Array class contains [a method](http://www.ruby-doc.org/core-1.9.3/Array.
 ####Specs
 
 Stand-alone program developed without tests using a built in Ruby method.
+
+##Protein Translation
+
+Added a new parent class for NucleicAcid called Sequence. This also became the parent to a new Protein class. Added the ability for RNA to be translated to a Protein string.
+
+####Internals
+
+When I moved some of the guts of NucleicAcid into Sequence I used a dash of metaprogramming. I had the class automatically define a number of count methods for each of the allowed symbols for the type of sequence. For example, DNA would automatically get a count_A, count_G, count_C and count_T.
+
+The protein translation itself was accomplish by looping through the RNA codons (three bases at a time using a RegExp) and mapping to amino acids by way of a hash constant.
+
+####Specs
+
+Includes 39 tests and 95 assertions.
 
 # Unlicense
 

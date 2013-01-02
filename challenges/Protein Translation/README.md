@@ -1,30 +1,26 @@
-## Enumerating Gene Orders: SOLVED
+## Protein Translation: SOLVED
 
-A permutation of length n is some ordering of the positive integers {1,2,...,n}. For example, (5,3,2,1,4) is a permutation of length 5.
+The 20 commonly occurring amino acids are abbreviated by using 20 letters from the English alphabet (all letters except for B, J, O, U, X, and Z). Protein strings are constructed from these 20 symbols. Henceforth, the term genetic string will incorporate protein strings along with DNA strings and RNA strings.
 
-**Given:** A positive integer n <= 7.
+The RNA codon table dictates the details regarding the encoding of specific codons into the amino acid alphabet.
 
-**Return:** The total number of permutations of length n, followed by a list of all such permutations (in any order).
+**Given:** An RNA string s corresponding to a strand of mRNA (of length at most 10 kbp).
+
+**Return:** The protein string encoded by s.
 
 #### Sample Dataset
 
-    3
+    AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA
 
 #### Sample Output
 
-    6
-    1 2 3
-    1 3 2
-    2 1 3
-    2 3 1
-    3 1 2
-    3 2 1
+    MAMAPRTEINSTRING
     
-Details here: [Enumerating Gene Orders](http://rosalind.info/problems/perm/)
+Details here: [Protein Translation](http://rosalind.info/problems/prot/)
     
 ## Testing and Running the Code
 
-    ruby main.rb << 3
+    ruby main.rb < roslind_rna.txt
     
 ## Unlicense
 

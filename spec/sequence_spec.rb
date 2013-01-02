@@ -70,7 +70,7 @@ describe Rosalind::Sequence do
       indexes.must_equal []
     end
     it "must find all indexes of a specific substring within its bases" do
-      indexes = @medium_string_3.find_substring_indexes(Rosalind::DNA.new('ATAT'))
+      indexes = @medium_string_3.find_substring_indexes(Rosalind::Sequence.new('ATAT'))
       indexes.count.must_equal 3
       indexes.must_equal [2, 4, 10]
     end
@@ -79,6 +79,13 @@ describe Rosalind::Sequence do
   describe "when initialized with 'rna' sample dataset" do
     it "must respond with a length of seventy" do
       @sample_rna_string.length.must_equal 70
+    end
+  end
+  
+  describe "when searching for the longest common substring" do
+    it "must find the correct substring amongst three sequences" do
+      longest_common_substring = Rosalind::Sequence.longest_common_substring([@medium_string_1, @medium_string_2, @medium_string_3])
+      longest_common_substring.must_equal Rosalind::Sequence.new('GA')
     end
   end
 end

@@ -16,10 +16,30 @@ module Rosalind
       @string.length
     end
     
+    def include? substring
+      if substring.class == String
+        @string.include? substring
+      elsif substring.is_a? Sequence
+        @string.include? substring.to_s
+      end
+    end
+    
     alias_method :size, :length
     
     def ==(other)
       @string == other.to_s
+    end
+    
+    def [](start_index, end_index)
+      self.class.new( @string[start_index,end_index] )
+    end
+    
+    def to_s
+      @string
+    end
+    
+    def to_a
+      @string.split(//)   
     end
     
     # Zip the array representation of this NucleicAcid with the array rep of another NucleicAcid.
@@ -50,13 +70,23 @@ module Rosalind
       end
     end
     
-    def to_s
-      @string
+  
+  # CLASS METHODS
+  
+  # Finds the longest common substring from an array of sequences.
+  # It is assumed that all the sequences are of the same class.
+  # This assumption allows us to return a sub-sequence of the same class as
+  # the sequences we searched through.
+  def self.longest_common_substring(sequences)
+    shortest = sequences.min_by(&:length)
+    maxlen = shortest.length
+    maxlen.downto(1) do |len|
+      0.upto(maxlen - len) do |start|
+        substr = shortest.to_s[start,len]
+        return shortest.class.new(substr) if sequences.all?{|seq| seq.to_s.include? substr }
+      end
     end
-    
-    def to_a
-      @string.split(//)   
-    end
+  end
     
   protected
     

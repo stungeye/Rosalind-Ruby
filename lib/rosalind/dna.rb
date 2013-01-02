@@ -3,6 +3,12 @@ require_relative 'nucleic_acid'
 module Rosalind
   class DNA < NucleicAcid
     
+    ALLOWED_SYMBOLS = ['G','A','C','T']
+    
+    def initialize(input_string = "")
+      super(input_string, ALLOWED_SYMBOLS)
+    end
+    
     def ASCII_base_count
       "#{count_A} #{count_C} #{count_G} #{count_T}"
     end

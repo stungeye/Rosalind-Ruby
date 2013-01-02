@@ -13,6 +13,7 @@ describe Rosalind::DNA do
   describe "when asked for its class" do
     it "must response with DNA" do
       @empty_dna.class.must_equal Rosalind::DNA
+      @short_dna.class.must_equal Rosalind::DNA
     end
   end
   

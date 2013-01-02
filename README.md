@@ -16,6 +16,7 @@ All library code is in the [lib](https://github.com/stungeye/Rosalind-Ruby/tree/
 6. Finding a Motif in DNA - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Finding%20a%20Motif%20in%20DNA) - [Details](http://rosalind.info/problems/subs/)
 7. Enumerating Gene Orders - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Enumerating%20Gene%20Orders) - [Details](http://rosalind.info/problems/perm/)
 8. Protein Translation - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Protein%20Translation) - [Details](http://rosalind.info/problems/prot/)
+9. Finding a Shared Motif - [Code](https://github.com/stungeye/Rosalind-Ruby/tree/master/challenges/Finding%20a%20Shared%20Motif) - [Details](http://rosalind.info/problems/lcs/)
 
 # Development Journal
 
@@ -121,6 +122,20 @@ The protein translation itself was accomplish by looping through the RNA codons 
 ####Specs
 
 Includes 39 tests and 95 assertions.
+
+##Finding a Shared Motif
+
+Added a helper method as a Sequence class method for finding a common substring. 
+
+####Internals
+
+String manipulation / traversal to find the long common substring. Initially I had the internals of the search manipulating Sequences, rather than strings, but the object creation overhead made the method incredibly slow.
+
+The lcs method assumes that all the sequences passed by way of its argument array are of the same class. It uses the class of the shortest sequence as the return type for the located sequence.
+
+####Specs
+
+Includes 42 tests and 98 assertions.
 
 # Unlicense
 

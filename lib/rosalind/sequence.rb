@@ -76,7 +76,8 @@ module Rosalind
   # Finds the longest common substring from an array of sequences.
   # It is assumed that all the sequences are of the same class.
   # This assumption allows us to return a sub-sequence of the same class as
-  # the sequences we searched through.
+  # the sequences we searched through. I guess I could have also just returned a string.
+  # Found tweaked from: http://stackoverflow.com/a/2158481
   def self.longest_common_substring(sequences)
     shortest = sequences.min_by(&:length)
     maxlen = shortest.length
@@ -86,6 +87,7 @@ module Rosalind
         return shortest.class.new(substr) if sequences.all?{|seq| seq.to_s.include? substr }
       end
     end
+    return nil
   end
     
   protected

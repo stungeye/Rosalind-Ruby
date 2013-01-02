@@ -87,5 +87,8 @@ describe Rosalind::Sequence do
       longest_common_substring = Rosalind::Sequence.longest_common_substring([@medium_string_1, @medium_string_2, @medium_string_3])
       longest_common_substring.must_equal Rosalind::Sequence.new('GA')
     end
+    it "must return nil if not common substring is found" do
+      Rosalind::Sequence.longest_common_substring([Rosalind::Sequence.new('A'), Rosalind::Sequence.new('G')]).must_equal nil
+    end
   end
 end

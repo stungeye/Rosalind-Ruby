@@ -7,6 +7,8 @@ describe Rosalind::RNA do
     @short_rna = Rosalind::RNA.new('ACGU')
     @sample_rna = Rosalind::RNA.new('AGCUUUUCAUUCUGACUGCAACGGGCAAUAUGUCUCUGUGUGGAUUAAAAAAAGAGUGUCUGAUAGCAGC')
     @sample_dna = Rosalind::DNA.new('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC')
+    @sample_rna_for_protein = Rosalind::RNA.new('AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA')
+    @converted_protein = Rosalind::Protein.new('MAMAPRTEINSTRING')
   end
   
   describe "when asked for its class" do
@@ -32,6 +34,16 @@ describe Rosalind::RNA do
     end
     it "must be able to convert back to original RNA" do
       @sample_rna.to_dna.to_rna.must_equal @sample_rna
+    end
+  end
+  
+  describe "when transcribing condons to a protein string" do
+    it "must be able to convert to a Protein object" do
+      @sample_rna_for_protein.to_protein.class.must_equal Rosalind::Protein
+    end
+    it "must convert to a Protein correctly" do
+      @protein_from_rna = @sample_rna_for_protein.to_protein
+      @protein_from_rna.must_equal @converted_protein
     end
   end
 end

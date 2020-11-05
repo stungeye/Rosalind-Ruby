@@ -20,120 +20,120 @@ All library code is in the [lib](https://github.com/stungeye/Rosalind-Ruby/tree/
 
 # Development Journal
 
-##Counting DNA Nucleotides
+## Counting DNA Nucleotides
 
 A single DNA class is developed.
 
-####Internals
+#### Internals
 
 * The ordered list of nucleotides is implemented with a String.
 * Base counting is performed when a DNA object is instantiated by way of a Hash.
 
-####Specs
+#### Specs
 
 Includes 8 tests and 17 assertions.
 
-##Transcribing DNA into RNA
+## Transcribing DNA into RNA
 
 A NucleicAcid class is refactored from the DNA class. DNA and RNA classes inherit from NucelicAcid.
 
-####Internals
+#### Internals
 
 * NucleicAcid handles base transcription using gsub on the nucleotide String.
 * NucleciAcid handles object comparison `==` using String equality.
 * DNA and RNA implement symmetric to_rna and to_dna methods.
 
-####Specs
+#### Specs
 
 Includes 19 tests and 36 assertions.
 
 A Rakefile was added to handle multiple spec files.
 
-##Complementing a Strand of DNA
+## Complementing a Strand of DNA
 
 DNA now includes a `to_reverse_complement` method that returns another DNA object.
 
-####Internals
+#### Internals
 
 Reversal is done using String manipulation. The complementing is done using an Array mapping of the String.
 
-####Specs
+#### Specs
 
 Includes 21 tests and 38 assertions.
 
-##Computing GC Content
+## Computing GC Content
 
 Refactored code such that all classes are part of a Rosalind module. Added a Fasta class to read FASTA strings. Added GC content percentage calculation to NucleicAcid.
 
-####Internals
+#### Internals
 
 Parsed FASTA strings are stored as a hash. This makes retrieving by identifier easy, but sorting is a little awkward. 
 
-####Specs
+#### Specs
 
 Includes 28 tests and 48 assertions.
 
-##Counting Point Mutations
+## Counting Point Mutations
 
 Added hamming distance method to NucelicAcid. Refactored all challenges such that the library and specs are now in the root folder, rather than duplicated within each challenge.
 
-####Internals
+#### Internals
 
 To calculate the hamming distance I have one NucelicAcid object compare its bases with those of another NucelicAcid. It feels wrong to peak this deep inside another object, but I made myself feel better by comparing arrays fetched using a custom to_a method. So, at least I'm not directly inspecting the internal bases. Is there a more OO way to do this type of low level comparison?
 
-####Specs
+#### Specs
 
 Includes 32 tests and 52 assertions.
 
-##Finding a Motif in DNA
+## Finding a Motif in DNA
 
 Added a find_substring_indexes method to NucelicAcid.
 
-####Internals
+#### Internals
 
 Used Ruby's sub-string finding method [index](http://www.ruby-doc.org/core-1.9.3/String.html#method-i-index) to find all the indexes of all occurances of a sub-string of DNA within another DNA string.
 
-####Specs
+#### Specs
 
 Includes 34 tests and 56 assertions.
 
-##Enumerating Gene Orders
+## Enumerating Gene Orders
 
 Stand-alone program developed find all permutations of integer sets of length n.
 
-####Internals
+#### Internals
  
 Ruby's Array class contains [a method](http://www.ruby-doc.org/core-1.9.3/Array.html#method-i-permutation) that returns an enumerator of array permuations. Nice.
 
-####Specs
+#### Specs
 
 Stand-alone program developed without tests using a built in Ruby method.
 
-##Protein Translation
+## Protein Translation
 
 Added a new parent class for NucleicAcid called Sequence. This also became the parent to a new Protein class. Added the ability for RNA to be translated to a Protein string.
 
-####Internals
+#### Internals
 
 When I moved some of the guts of NucleicAcid into Sequence I used a dash of metaprogramming. I had the class automatically define a number of count methods for each of the allowed symbols for the type of sequence. For example, DNA would automatically get a count_A, count_G, count_C and count_T.
 
 The protein translation itself was accomplish by looping through the RNA codons (three bases at a time using a RegExp) and mapping to amino acids by way of a hash constant.
 
-####Specs
+#### Specs
 
 Includes 39 tests and 95 assertions.
 
-##Finding a Shared Motif
+## Finding a Shared Motif
 
 Added a helper method as a Sequence class method for finding a common substring. 
 
-####Internals
+#### Internals
 
 String manipulation / traversal to find the long common substring. Initially I had the internals of the search manipulating Sequences, rather than strings, but the object creation overhead made the method incredibly slow.
 
 The lcs method assumes that all the sequences passed by way of its argument array are of the same class. It uses the class of the shortest sequence as the return type for the located sequence.
 
-####Specs
+#### Specs
 
 Includes 42 tests and 98 assertions.
 
